@@ -1,0 +1,713 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #172a3a 0%,
+            #07111c 55%,
+            #02070d 100%
+        );
+
+    color: #f2eadc;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   TELAS
+========================================= */
+
+.tela {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+}
+
+
+/* Esconde as telas que não estão ativas */
+
+.tela-escondida {
+    display: none !important;
+}
+
+
+/* =========================================
+   MENU PRINCIPAL
+========================================= */
+
+#tela-menu {
+    text-align: left;
+}
+
+
+/* LOGO */
+
+.logo {
+    margin-bottom: 60px;
+    animation: aparecer 1s ease;
+}
+
+.logo span {
+    display: block;
+
+    font-size: 20px;
+    letter-spacing: 8px;
+
+    opacity: 0.8;
+}
+
+.logo h1 {
+    margin-top: 8px;
+
+    font-size: clamp(48px, 9vw, 100px);
+    letter-spacing: 5px;
+
+    color: #e6c77a;
+
+    text-shadow:
+        0 0 10px rgba(230, 199, 122, 0.3),
+        0 0 30px rgba(230, 199, 122, 0.1);
+}
+
+.logo p {
+    margin-top: 1px;
+
+    font-size: 16px;
+    letter-spacing: 3px;
+
+    color: #aebdca;
+}
+
+
+/* =========================================
+   BOTÕES
+========================================= */
+
+button {
+    border: 1px solid #31546a;
+
+    padding: 15px 35px;
+
+    background: #102b3d;
+    color: #f2eadc;
+
+    border-radius: 6px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        background 0.2s,
+        box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+
+    background: #121f29;
+
+    box-shadow:
+        0 5px 15px rgba(4, 0, 106, 0.25);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* BOTÃO JOGAR */
+
+#btn-jogar {
+    background: #b99545;
+
+    transition: 0.4s;
+}
+
+#btn-jogar:hover {
+    background: #997b38;
+}
+
+
+/* MENU DE BOTÕES */
+
+.menu-botoes {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    width: min(350px, 40vw);
+}
+
+.menu-botoes button {
+    width: 100%;
+}
+
+
+/* FRASE */
+
+.frase {
+    margin-top: 45px;
+
+    font-size: 12px;
+    letter-spacing: 3px;
+
+    color: #718696;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   TÍTULOS DAS TELAS
+========================================= */
+
+.tela h2 {
+    margin-bottom: 35px;
+
+    color: #e6c77a;
+
+    font-size: clamp(28px, 5vw, 50px);
+    letter-spacing: 4px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   COMO JOGAR
+========================================= */
+
+.instrucoes {
+    width: min(650px, 90vw);
+
+    padding: 30px;
+
+    background: rgba(10, 28, 41, 0.8);
+
+    border: 1px solid #294852;
+    border-radius: 10px;
+
+    margin-bottom: 30px;
+}
+
+.instrucoes p {
+    margin-bottom: 18px;
+
+    line-height: 1.4;
+
+    color: #c9d3da;
+}
+
+.instrucoes p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   PREPARAÇÃO
+========================================= */
+
+.jogadores {
+    display: flex;
+
+    gap: 30px;
+
+    width: min(700px, 90vw);
+
+    margin-bottom: 35px;
+}
+
+.jogador {
+    flex: 1;
+
+    padding: 40px;
+
+    text-align: center;
+
+    background: #0b202f;
+
+    border: 1px solid #29485c;
+    border-radius: 10px;
+}
+
+.jogador h3 {
+    margin-bottom: 35px;
+
+    font-size: 14px;
+    letter-spacing: 2px;
+
+    color: #7fa8bd;
+}
+
+.jogador p {
+    font-size: 24px;
+
+    color: #e6c77a;
+}
+
+.configuracoes {
+    display: flex;
+
+    gap: 30px;
+
+    margin-bottom: 35px;
+
+    font-size: 13px;
+    letter-spacing: 2px;
+
+    color: #8fa4b2;
+}
+
+
+/* =========================================
+   TELA DO JOGO
+========================================= */
+
+#tela-jogo {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 30px;
+
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* CABEÇALHO */
+
+.header-jogo {
+    width: 100%;
+    max-width: 1200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.header-jogo p {
+    margin-bottom: 5px;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    color: #718696;
+}
+
+.header-jogo strong {
+    font-size: 22px;
+}
+
+
+/* =========================================
+   PERGUNTA
+========================================= */
+
+.pergunta {
+    text-align: center;
+
+    margin-bottom: 30px;
+
+    max-width: 800px;
+}
+
+.pergunta h2 {
+    margin-bottom: 10px;
+
+    font-size: clamp(22px, 4vw, 35px);
+}
+
+.pergunta p {
+    color: #9fb0bb;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   LIVROS
+========================================= */
+
+.livros {
+    width: min(1200px, 95vw);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #112f42,
+            #081923
+        );
+
+    border: 1px solid #31546a;
+    border-radius: 10px;
+}
+
+.livro {
+    padding: 20px;
+
+    background: #0b202f;
+
+    border: 1px solid #31546a;
+    border-radius: 10px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s,
+        border-color 0.25s,
+        box-shadow 0.25s;
+}
+
+.livro:hover {
+    transform: translateY(-5px);
+
+    border-color: #e6c77a;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+
+/* CAPA */
+
+.capa {
+    height: 190px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #173c51,
+            #081923
+        );
+
+    border: 1px solid #3b6075;
+    border-radius: 5px;
+
+    overflow: hidden;
+}
+
+.capa img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* INFORMAÇÕES DO LIVRO */
+
+.livro h3 {
+    margin-bottom: 8px;
+
+    font-size: 20px;
+
+    color: #e6c77a;
+}
+
+.livro-autor {
+    font-size: 14px;
+
+    color: #b9c5cc;
+}
+
+.livro-ano {
+    font-size: 12px;
+
+    color: #718696;
+}
+
+.livro-sinopse {
+    margin-top: 15px;
+
+    font-size: 13px;
+    line-height: 1.5;
+
+    color: #9fb0bb;
+}
+
+
+/* =========================================
+   ÁREA DOS JOGADORES
+========================================= */
+
+.area-jogadores {
+    width: min(900px, 95vw);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+    margin-top: 25px;
+}
+
+.area-jogador {
+    padding: 20px;
+
+    background-color: rgba(11, 32, 47, 0.8);
+
+    border: 1px solid #29485c;
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.area-jogador h3 {
+    margin-bottom: 15px;
+
+    font-size: 13px;
+    letter-spacing: 2px;
+
+    color: #7fa8bd;
+}
+
+.botoes-resposta {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.botoes-resposta button {
+    width: 55px;
+    height: 45px;
+
+    padding: 0;
+}
+
+
+/* =========================================
+   REVELAÇÃO
+========================================= */
+
+#tela-revelacao {
+    text-align: center;
+}
+
+#resultado-titulo {
+    font-size: clamp(30px, 6vw, 55px);
+}
+
+#resultado-livro {
+    width: min(650px, 90vw);
+
+    padding: 30px;
+
+    margin-bottom: 30px;
+
+    background: #0b202f;
+
+    border: 1px solid #31546a;
+    border-radius: 10px;
+}
+
+#resultado-nome {
+    margin-bottom: 15px;
+
+    color: #e6c77a;
+
+    font-size: 25px;
+}
+
+#resultado-explicacao {
+    line-height: 1.6;
+
+    color: #aebdca;
+}
+
+.resultado-jogadores {
+    display: flex;
+
+    gap: 60px;
+
+    margin-bottom: 30px;
+
+    text-align: center;
+}
+
+.resultado-jogadores h3 {
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    color: #718696;
+}
+
+.resultado-jogadores p {
+    margin-top: 8px;
+}
+
+
+/* =========================================
+   RESULTADO FINAL
+========================================= */
+
+#tela-final {
+    text-align: center;
+}
+
+.placar-final {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 60px;
+
+    margin: 30px 0 40px;
+}
+
+.placar-final h3 {
+    margin-bottom: 10px;
+
+    font-size: 13px;
+}
+
+.placar-final strong {
+    font-size: 70px;
+
+    color: #e6c77a;
+}
+
+#mensagem-final {
+    margin-bottom: 30px;
+
+    color: #9fb0bb;
+}
+
+.botoes-finais {
+    display: flex;
+
+    gap: 15px;
+}
+
+
+/* =========================================
+   ANIMAÇÕES
+========================================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 700px) {
+
+    .logo h1 {
+        letter-spacing: 2px;
+    }
+
+
+    .menu-botoes {
+        width: min(350px, 85vw);
+    }
+
+
+    .jogadores {
+        flex-direction: column;
+    }
+
+
+    .configuracoes {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 10px;
+    }
+
+
+    .livros {
+        grid-template-columns: 1fr;
+    }
+
+
+    .livro {
+        max-width: 400px;
+
+        width: 100%;
+
+        margin: auto;
+    }
+
+
+    .area-jogadores {
+        grid-template-columns: 1fr;
+    }
+
+
+    .header-jogo {
+        gap: 15px;
+    }
+
+
+    .placar-final {
+        gap: 25px;
+    }
+
+
+    .botoes-finais {
+        flex-direction: column;
+
+        width: min(300px, 90vw);
+    }
+
+}
+

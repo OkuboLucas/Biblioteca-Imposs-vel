@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Biblioteca Impossível</title>
+
+    <link rel="stylesheet" href="biblim.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+         MENU PRINCIPAL
+    ========================================= -->
+
+    <main id="tela-menu" class="tela">
+
+        <div class="logo">
+            <span>PROJETO</span>
+            <h1>BIBLIOTECA IMPOSSÍVEL</h1>
+            <p>Você consegue descobrir o que foi criado por IA?</p>
+        </div>
+
+        <div class="menu-botoes">
+
+            <button id="btn-jogar">
+                JOGAR
+            </button>
+
+            <button id="btn-como-jogar">
+                COMO JOGAR
+            </button>
+
+            <button id="btn-creditos">
+                CRÉDITOS
+            </button>
+
+        </div>
+
+        <p class="frase">
+            Nem todo livro é aquilo que parece.
+        </p>
+
+    </main>
+
+
+    <!-- ========================================
+         COMO JOGAR
+    ========================================= -->
+
+    <section id="tela-como-jogar" class="tela tela-escondida">
+
+        <h2>COMO JOGAR</h2>
+
+        <div class="instrucoes">
+
+            <p>
+                Em cada rodada, você verá três livros.
+            </p>
+
+            <p>
+                Dois deles são livros reais e um foi criado
+                por Inteligência Artificial.
+            </p>
+
+            <p>
+                Os jogadores devem escolher qual livro
+                acreditam ter sido criado por IA.
+            </p>
+
+            <p>
+                Depois das respostas, a verdadeira origem
+                do livro será revelada.
+            </p>
+
+        </div>
+
+        <button id="btn-voltar">
+            VOLTAR
+        </button>
+
+    </section>
+
+
+    <!-- ========================================
+         PREPARAÇÃO
+    ========================================= -->
+
+    <section id="tela-preparacao" class="tela tela-escondida">
+
+        <h2>PREPARAÇÃO</h2>
+
+        <div class="jogadores">
+
+            <div class="jogador">
+                <h3>JOGADOR 1</h3>
+                <p>Pronto?</p>
+            </div>
+
+            <div class="jogador">
+                <h3>JOGADOR 2</h3>
+                <p>Pronto?</p>
+            </div>
+
+        </div>
+
+        <div class="configuracoes">
+            <span>5 RODADAS</span>
+            <span>2 JOGADORES</span>
+        </div>
+
+        <button id="btn-comecar">
+            COMEÇAR
+        </button>
+
+    </section>
+
+
+    <!-- ========================================
+         JOGO
+    ========================================= -->
+
+    <section id="tela-jogo" class="tela tela-escondida">
+
+        <div class="header-jogo">
+
+            <div>
+                <p>RODADA</p>
+                <strong id="rodada-atual">1 / 5</strong>
+            </div>
+
+            <div>
+                <p>TEMPO</p>
+                <strong id="tempo">30</strong>
+            </div>
+
+            <div>
+                <p>PLACAR</p>
+                <strong id="placar">0 - 0</strong>
+            </div>
+
+        </div>
+
+
+        <div class="pergunta">
+
+            <h2>
+                QUAL FOI CRIADO POR IA?
+            </h2>
+
+            <p>
+                Analise os livros e escolha aquele que
+                parece ter sido criado por Inteligência Artificial.
+            </p>
+
+        </div>
+
+
+        <div class="livros">
+
+            <!-- LIVRO 1 -->
+
+            <article class="livro">
+
+                <div class="capa">
+                    <img src="" alt="">
+                </div>
+
+                <h3 class="livro-titulo"></h3>
+
+                <p class="livro-autor"></p>
+
+                <p class="livro-ano"></p>
+
+                <p class="livro-sinopse"></p>
+
+            </article>
+
+
+            <!-- LIVRO 2 -->
+
+            <article class="livro">
+
+                <div class="capa">
+                    <img src="" alt="">
+                </div>
+
+                <h3 class="livro-titulo"></h3>
+
+                <p class="livro-autor"></p>
+
+                <p class="livro-ano"></p>
+
+                <p class="livro-sinopse"></p>
+
+            </article>
+
+
+            <!-- LIVRO 3 -->
+
+            <article class="livro">
+
+                <div class="capa">
+                    <img src="" alt="">
+                </div>
+
+                <h3 class="livro-titulo"></h3>
+
+                <p class="livro-autor"></p>
+
+                <p class="livro-ano"></p>
+
+                <p class="livro-sinopse"></p>
+
+            </article>
+
+        </div>
+
+
+        <!-- RESPOSTAS DOS JOGADORES -->
+
+        <div class="area-jogadores">
+
+            <div class="area-jogador">
+
+                <h3>JOGADOR 1</h3>
+
+                <div class="botoes-resposta">
+
+                    <button data-jogador="1" data-resposta="0">
+                        1
+                    </button>
+
+                    <button data-jogador="1" data-resposta="1">
+                        2
+                    </button>
+
+                    <button data-jogador="1" data-resposta="2">
+                        3
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="area-jogador">
+
+                <h3>JOGADOR 2</h3>
+
+                <div class="botoes-resposta">
+
+                    <button data-jogador="2" data-resposta="0">
+                        1
+                    </button>
+
+                    <button data-jogador="2" data-resposta="1">
+                        2
+                    </button>
+
+                    <button data-jogador="2" data-resposta="2">
+                        3
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================================
+         REVELAÇÃO
+    ========================================= -->
+
+    <section id="tela-revelacao" class="tela tela-escondida">
+
+        <h2 id="resultado-titulo">
+            RESULTADO
+        </h2>
+
+        <div id="resultado-livro">
+
+            <h3 id="resultado-nome"></h3>
+
+            <p id="resultado-explicacao"></p>
+
+        </div>
+
+        <div class="resultado-jogadores">
+
+            <div>
+                <h3>JOGADOR 1</h3>
+                <p id="resultado-jogador-1"></p>
+            </div>
+
+            <div>
+                <h3>JOGADOR 2</h3>
+                <p id="resultado-jogador-2"></p>
+            </div>
+
+        </div>
+
+        <button id="btn-proxima">
+            PRÓXIMA RODADA
+        </button>
+
+    </section>
+
+
+    <!-- ========================================
+         RESULTADO FINAL
+    ========================================= -->
+
+    <section id="tela-final" class="tela tela-escondida">
+
+        <h2>
+            FIM DE JOGO
+        </h2>
+
+        <div class="placar-final">
+
+            <div>
+                <h3>JOGADOR 1</h3>
+                <strong id="placar-final-1">0</strong>
+            </div>
+
+            <div>
+                <h3>JOGADOR 2</h3>
+                <strong id="placar-final-2">0</strong>
+            </div>
+
+        </div>
+
+        <p id="mensagem-final"></p>
+
+        <div class="botoes-finais">
+
+            <button id="btn-jogar-novamente">
+                JOGAR NOVAMENTE
+            </button>
+
+            <button id="btn-menu">
+                MENU
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="perguntas.js"></script>
+    <script src="game.js"></script>
+
+</body>
+
+</html>
+
