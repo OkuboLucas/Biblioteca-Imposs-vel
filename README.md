@@ -87,6 +87,3 @@ Projeto desenvolvido como uma aplicação prática para explorar **HTML, CSS, Ja
 ### 📚 Você confiaria em todos os livros desta biblioteca?
 
 </div>
-```
-
-Esse estilo fica bem mais **“portfólio/projeto”** no GitHub: pouca leitura, bastante espaço visual e uma apresentação rápida da ideia.
